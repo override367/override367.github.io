@@ -35,7 +35,7 @@
             "8th": [],
             "9th": []
         };
-		var resultString = "Hello";
+		var resultString = "";
 
         for (var key in spell_data) {
             if (spell_data.hasOwnProperty(key)) {
@@ -61,10 +61,16 @@
             } else {
                 choose_from = by_level[document.getElementById('levels').value];
             }
-            var randomString += choose_from[Math.floor(Math.random() * choose_from.length)];
-			resultString += randomString + "\n ";
+            var randomString = choose_from[Math.floor(Math.random() * choose_from.length)];
+			resultString += randomString + "<br>";
             document.getElementById('result').innerHTML = resultString;
         }
+		
+		
+		function reset() {
+		resultString = ""
+		document.getElementById('result').innerHTML = resultString;
+		}
 
     </script>
 
@@ -93,4 +99,5 @@
     </select>
     <button type="button" onclick="choose_random()">Generate</button>
     <p id="result"></p>
+	<button type="button" onclick="reset()">Reset Results</button>
 </body>
