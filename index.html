@@ -61,7 +61,8 @@
             } else {
                 choose_from = by_level[document.getElementById('levels').value];
             }
-            resultString += choose_from[Math.floor(Math.random() * choose_from.length)];
+            var randomString += choose_from[Math.floor(Math.random() * choose_from.length)];
+			resultString += randomString
             document.getElementById('result').innerHTML = resultString;
         }
 
