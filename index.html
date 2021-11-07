@@ -62,7 +62,7 @@
                 choose_from = by_level[document.getElementById('levels').value];
             }
             var randomString += choose_from[Math.floor(Math.random() * choose_from.length)];
-			resultString += "\n" 
+			resultString += "<br>" 
 			resultString += randomString
             document.getElementById('result').innerHTML = resultString;
         }
